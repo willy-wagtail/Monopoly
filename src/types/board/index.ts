@@ -1,6 +1,6 @@
 import { ShuffledChanceDeck } from "../cards/chance";
 import { ShuffledCommunityChestDeck } from "../cards/community-chest";
-import { Squares } from "./square";
+import { Squares } from "../square";
 
 export type Board = {
   squares: Squares;

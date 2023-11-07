@@ -1,4 +1,7 @@
+import { CardType } from "..";
+
 export type ChanceCard = {
+  type: CardType.Chance;
   text: ChanceCardText;
 };
 
@@ -6,7 +9,9 @@ export type ChanceDeck = ChanceCard[];
 
 export type ShuffledChanceDeck = ChanceDeck;
 
-export type ShuffleChanceDeck = (deck: ChanceDeck) => ShuffleChanceDeck;
+export type CreateChanceCard = (text: ChanceCardText) => ChanceCard;
+
+export type CreateChanceDeck = () => ChanceDeck;
 
 export type CreateShuffledChanceDeck = () => ShuffledChanceDeck;
 

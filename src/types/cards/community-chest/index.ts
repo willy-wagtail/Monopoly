@@ -1,4 +1,7 @@
+import { CardType } from "..";
+
 export type CommunityChestCard = {
+  type: CardType.Community_Chest;
   text: CommunityChestCardText;
 };
 
@@ -6,9 +9,11 @@ export type CommunityChestDeck = CommunityChestCard[];
 
 export type ShuffledCommunityChestDeck = CommunityChestDeck;
 
-export type ShuffleCommunityChestDeck = (
-  deck: CommunityChestDeck
-) => ShuffledCommunityChestDeck;
+export type CreateCommunityChestCard = (
+  text: CommunityChestCardText
+) => CommunityChestCard;
+
+export type CreateCommunityChestDeck = () => CommunityChestDeck;
 
 export type CreateShuffledCommunityChestDeck = () => ShuffledCommunityChestDeck;
 

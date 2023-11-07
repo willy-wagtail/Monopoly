@@ -1,17 +1,14 @@
-import { SquareType, CreateSquares } from "../../domain/board/square";
-import { CreateChance } from "../../domain/board/square/Chance";
-import { CreateCommunityChest } from "../../domain/board/square/CommunityChest";
-import { CreateFreeParking } from "../../domain/board/square/FreeParking";
-import { CreateGo } from "../../domain/board/square/Go";
-import { CreateGoToJail } from "../../domain/board/square/GoToJail";
-import { CreateInJailOrJustVisiting } from "../../domain/board/square/InJailOrJustVisiting";
-import {
-  CreateProperty,
-  PropertyColour,
-} from "../../domain/board/square/Property";
-import { CreateStation } from "../../domain/board/square/Station";
-import { CreateTax } from "../../domain/board/square/Tax";
-import { CreateUtility } from "../../domain/board/square/Utility";
+import { SquareType, CreateSquares } from "../types/square";
+import { CreateChance } from "../types/square/Chance";
+import { CreateCommunityChest } from "../types/square/CommunityChest";
+import { CreateFreeParking } from "../types/square/FreeParking";
+import { CreateGo } from "../types/square/Go";
+import { CreateGoToJail } from "../types/square/GoToJail";
+import { CreateInJailOrJustVisiting } from "../types/square/InJailOrJustVisiting";
+import { CreateProperty, PropertyColour } from "../types/square/Property";
+import { CreateStation } from "../types/square/Station";
+import { CreateTax } from "../types/square/Tax";
+import { CreateUtility } from "../types/square/Utility";
 
 export const createSquares: CreateSquares = () => [
   createGo(),
@@ -39,10 +36,10 @@ export const createSquares: CreateSquares = () => [
   createProperty("Orange", "Vine Street", 200),
 
   createFreeParking(),
-  createProperty("Red", "Vince Street", 200),
+  createProperty("Red", "Strand", 220),
   createChance(),
-  createProperty("Red", "Vince Street", 200),
-  createProperty("Red", "Vince Street", 200),
+  createProperty("Red", "Fleet Street", 220),
+  createProperty("Red", "Trafalgar Square", 240),
 
   createStation("Fenchurch Street station", 200),
   createProperty("Yellow", "Leicester Square", 260),
@@ -51,10 +48,10 @@ export const createSquares: CreateSquares = () => [
   createProperty("Yellow", "Piccadilly", 280),
 
   createGoToJail(),
-  createProperty("Green", "Piccadilly", 280),
-  createProperty("Green", "Piccadilly", 280),
+  createProperty("Green", "Regent Street", 300),
+  createProperty("Green", "Oxford Street", 300),
   createCommunityChest(),
-  createProperty("Green", "Piccadilly", 280),
+  createProperty("Green", "Bond Street", 320),
 
   createStation("Liverpool Street station", 200),
   createChance(),
