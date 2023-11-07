@@ -5,7 +5,7 @@ import {
   CreateChanceDeck,
   CreateShuffledChanceDeck,
 } from "../../types/cards/chance";
-import { shuffle } from "../../util/shuffle-array";
+import { shuffle } from "../../util/array/shuffle";
 
 export const createShuffledChanceDeck: CreateShuffledChanceDeck = () => {
   return shuffle(createChanceDeck());
